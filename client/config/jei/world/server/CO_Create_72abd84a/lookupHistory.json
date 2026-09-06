@@ -1,0 +1,12 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"pointblank:processor"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pointblank:printer"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pointblank:gunmetal_ingot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pointblank:gunmetal_mesh"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pointblank:gunmetal_nugget"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pointblank:guninternals"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:white_sail"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pointblank:spear"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pointblank:spearblack"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

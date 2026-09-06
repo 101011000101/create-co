@@ -1,0 +1,9 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"create_jetpack:jetpack"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create_jetpack:netherite_jetpack"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create_jetpack:jetpack","components":{"create:banktank_air":900}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createlazytick:clock"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:diesel_engine"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"simulatedrubies:pole"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

@@ -1,0 +1,229 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "587F3F0CBA2151C8"
+	group: "7A6E05FB8A7E04B8"
+	id: "587F3F0CBA2151C8"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:grass_block"
+			}
+			id: "4F182661D27E5D19"
+			rewards: [
+				{
+					count: 3
+					id: "24BCA2C879F8CBB4"
+					item: {
+						count: 1
+						id: "minecraft:apple"
+					}
+					type: "item"
+				}
+				{
+					id: "5F3E0B3F8328B506"
+					item: {
+						count: 1
+						id: "minecraft:leather_boots"
+					}
+					type: "item"
+				}
+			]
+			size: 1.5d
+			tasks: [{
+				dimension: "minecraft:overworld"
+				icon: {
+					components: {
+						"ftbquests:icon": "minecraft:textures/gui/realms/survival_spawn.png"
+					}
+					id: "ftbquests:custom_icon"
+				}
+				id: "7B793F61758350CA"
+				type: "dimension"
+			}]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4F182661D27E5D19"]
+			id: "6E8B226B2DFED15C"
+			rewards: [
+				{
+					count: 2
+					id: "074AD476AEB1C8ED"
+					item: {
+						count: 1
+						id: "minecraft:oak_planks"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "1E4542A433C78323"
+					item: {
+						count: 1
+						id: "numismatics:spur"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "17B3AAC6BD47BAC3"
+				item: { count: 1, id: "minecraft:crafting_table" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["6E8B226B2DFED15C"]
+			dependency_requirement: "one_completed"
+			hide_dependency_lines: false
+			id: "4EFFB8AF57235B4F"
+			optional: true
+			progression_mode: "linear"
+			rewards: [
+				{
+					count: 8
+					id: "072AB27FE0339702"
+					item: {
+						count: 1
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "67EB1BA3A0F021C6"
+					item: {
+						count: 1
+						id: "numismatics:spur"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "5C13CBC11AD1B615"
+				item: { count: 1, id: "minecraft:stone_axe" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3D715CC878AB40DB"]
+			id: "48B5A8D7A4AE63F4"
+			rewards: [
+				{
+					count: 2
+					id: "0760C7552AEDBD6F"
+					item: {
+						count: 1
+						id: "numismatics:spur"
+					}
+					type: "item"
+				}
+				{
+					id: "0D295E3382F19A31"
+					item: {
+						count: 1
+						id: "farmersdelight:cutting_board"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "556818407DC1E2E1"
+				item: { count: 1, id: "farmersdelight:flint_knife" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["48B5A8D7A4AE63F4"]
+			id: "15EA77F0098628E6"
+			rewards: [{
+				count: 2
+				id: "50969EA6ADFFB370"
+				item: {
+					count: 1
+					id: "minecraft:mutton"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "48DC198015FB2F2A"
+				item: { count: 1, id: "minecraft:campfire" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3D715CC878AB40DB"]
+			id: "0ADBA1A94C07EB45"
+			rewards: [{
+				count: 2
+				id: "404FD0DBE73F6D18"
+				item: {
+					count: 1
+					id: "numismatics:spur"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 2L
+				id: "28D0E5DB7C81EF88"
+				item: { count: 1, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["15EA77F0098628E6"]
+			id: "51237812A00620B5"
+			rewards: [{
+				id: "66FC1096ABBAC251"
+				item: {
+					count: 1
+					id: "farmersdelight:melon_popsicle"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "3A598615FF483520"
+				item: { count: 1, id: "farmersdelight:cooking_pot" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6E8B226B2DFED15C"]
+			id: "3D715CC878AB40DB"
+			rewards: [{
+				id: "3BACADCB0104956A"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "132606540ADC3189"
+				item: { count: 1, id: "minecraft:iron_ingot" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+	]
+}

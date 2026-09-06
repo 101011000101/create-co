@@ -1,0 +1,154 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "57B042E8B4C9B771"
+	group: "7A6E05FB8A7E04B8"
+	id: "57B042E8B4C9B771"
+	order_index: 1
+	progression_mode: "linear"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:belt_connector"
+			}
+			id: "4B21245B35614EA8"
+			rewards: [{
+				id: "1351EEE6B82190E8"
+				item: {
+					count: 1
+					id: "create:hand_crank"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				count: 8L
+				id: "471DDBECCE706CC9"
+				item: { count: 1, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"5E55670BAE8CBA60"
+				"025168F9B0AD1BC6"
+			]
+			dependency_requirement: "one_completed"
+			id: "3C8F0CE2ACA39267"
+			tasks: [{
+				id: "1986D878EB6A3E9E"
+				item: { count: 1, id: "create:mechanical_saw" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4B21245B35614EA8"]
+			id: "44E2211B5ED082F6"
+			rewards: [
+				{
+					count: 2
+					id: "154CA4EDD8FD7941"
+					item: {
+						count: 1
+						id: "create:cogwheel"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "6CF0FD864E8DE9B1"
+					item: {
+						count: 1
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 8L
+				id: "70F34C84D70032C4"
+				item: { count: 1, id: "create:shaft" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["44E2211B5ED082F6"]
+			id: "025168F9B0AD1BC6"
+			rewards: [{
+				count: 2
+				id: "461D9E1B82029610"
+				item: {
+					count: 1
+					id: "create:shaft"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "22F6BA85C44F6470"
+				item: { count: 1, id: "create:water_wheel" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3C8F0CE2ACA39267"]
+			id: "6D3BCFB9C360A657"
+			tasks: [{
+				id: "11805E9145398A7D"
+				item: { count: 1, id: "create:mechanical_drill" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["099B9F72C4372DDF"]
+			id: "166F458D53524836"
+			tasks: [{
+				id: "79FBD97AC9766DF7"
+				item: { count: 1, id: "create:mechanical_press" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"5E55670BAE8CBA60"
+				"025168F9B0AD1BC6"
+			]
+			dependency_requirement: "one_completed"
+			id: "099B9F72C4372DDF"
+			tasks: [{
+				id: "0F37D0184D9F2210"
+				item: { count: 1, id: "create:mechanical_mixer" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"025168F9B0AD1BC6"
+				"44E2211B5ED082F6"
+			]
+			id: "5E55670BAE8CBA60"
+			tasks: [{
+				id: "48276FE704988C5E"
+				item: { count: 1, id: "create:large_water_wheel" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+	]
+}

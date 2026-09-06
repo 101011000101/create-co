@@ -1,0 +1,22 @@
+#How strongly guided shells rotate a Sable sublevel each physics tick.
+#1 = very weak steering, 100 = near-instant turning even for very heavy sublevels.
+# Default: 50
+# Range: 1 ~ 100
+guidanceStrength = 50
+#Logs guided shell detection and steering counters every few seconds.
+debugGuidance = false
+#If enabled, guided shells emit a virtual full-strength redstone signal from every side except their tip before detonating.
+emitRedstoneBeforeDetonation = true
+#How much guidance confusion one dispensed iron nugget adds.
+#At 100, a single valid nugget makes a guided sublevel lose guidance.
+# Default: 5
+# Range: 1 ~ 100
+decoyConfusionPerNuggetPercent = 5
+#If enabled, a guided sublevel detonates shortly after decoys make it lose guidance.
+#If disabled, it simply stops guiding after reaching 100% confusion.
+detonateAfterGuidanceLoss = true
+#How many seconds after a guided sublevel exceeds 3 blocks/second collision detonation becomes active.
+#0 = collision detonation arms immediately after crossing the speed threshold.
+# Default: 2
+# Range: 0 ~ 30
+collisionDetonationArmDelaySeconds = 2

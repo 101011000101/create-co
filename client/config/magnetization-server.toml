@@ -1,0 +1,97 @@
+#Per-emitter GUI ceilings. The in-game config menu can't dial above these
+#values, so server owners can prevent griefer-tier loadouts.
+[guiLimits]
+	#Max strength tier the Electromagnet GUI can select.
+	#Allowed Values: NONE, WEAK, MEDIUM, STRONG, EXTREME
+	electromagnetMaxStrength = "EXTREME"
+	#Max range (blocks) the Electromagnet GUI can dial up to.
+	# Default: 256
+	# Range: 0 ~ 512
+	electromagnetMaxRange = 256
+	#Max strength tier the Magnetic Anchor GUI can select.
+	#Allowed Values: NONE, WEAK, MEDIUM, STRONG, EXTREME
+	anchorMaxStrength = "EXTREME"
+	#Max range (blocks) the Magnetic Anchor GUI can dial up to.
+	# Default: 256
+	# Range: 0 ~ 512
+	anchorMaxRange = 256
+	#Max strength tier the Repulsor Coil GUI can select.
+	#Allowed Values: NONE, WEAK, MEDIUM, STRONG, EXTREME
+	repulsorMaxStrength = "EXTREME"
+	#Max range (blocks) the Repulsor Coil GUI can dial up to.
+	# Default: 256
+	# Range: 0 ~ 512
+	repulsorMaxRange = 256
+	#Max strength tier the Tractor Beam GUI can select.
+	#Allowed Values: NONE, WEAK, MEDIUM, STRONG, EXTREME
+	tractorMaxStrength = "EXTREME"
+	#Max range (blocks) the Tractor Beam GUI can dial up to.
+	# Default: 256
+	# Range: 0 ~ 512
+	tractorMaxRange = 256
+	#Max strength tier the Magnetic Excavator GUI can select.
+	#Strength controls pull force and tunneling speed per in-flight ship.
+	#Allowed Values: NONE, WEAK, MEDIUM, STRONG, EXTREME
+	excavatorMaxStrength = "EXTREME"
+	#Max column depth (blocks) the Magnetic Excavator can rip ores from.
+	#Default high enough that EXTREME-tier excavators reach bedrock from the
+	#surface (the runtime applies a 6× multiplier to the tier's nominal range,
+	#so an EXTREME excavator scans 192 blocks deep with no GUI override).
+	# Default: 256
+	# Range: 1 ~ 384
+	excavatorMaxRange = 256
+	#Hard cap on cells the Excavator's cone scan considers per pass,
+	#regardless of strength + range. Acts as a safety against config
+	#typos. Bedrock from surface is ~200 blocks; default leaves headroom.
+	# Default: 256
+	# Range: 1 ~ 512
+	excavatorMaxBlocksPerCycle = 256
+	#Max number of ferromagnetic blocks one Magnetic Excavator may pull at
+	#the same time. Each pulled block becomes a Sable sub-level until it
+	#reaches the emitter, so this also caps physics-simulation cost. Per-emitter
+	#GUI control can dial individual excavators down below this admin ceiling.
+	# Default: 16
+	# Range: 1 ~ 64
+	excavatorMaxInFlight = 16
+
+#Diagnostic logging toggles. Off by default in production.
+[debug]
+	#Master toggle for FieldApplicator + anchor-binding debug logs.
+	#Set true while diagnosing emitter behavior; leave false on busy servers.
+	debugLogging = false
+	#Show extra diagnostic lines in goggle/HUD tooltips (e.g. a
+	#machine's live kinetic speed / source / network state).
+	#Handy when diagnosing why a block won't power; off by default.
+	goggleDiagnostics = false
+
+#Required permission level for each /magnetization command group.
+#0 = any player can run, 2 = operator (vanilla default), 3 or 4 =
+#higher op tiers. Levels read live from the spec via brigadier's
+#.requires() predicate so changes take effect on the next command
+#invocation without restart.
+[commands]
+	#Permission level for /magnetization debug field|forceAt.
+	# Default: 2
+	# Range: 0 ~ 4
+	debugPermission = 2
+	#Permission level for /magnetization spawn_test_ship|spawn_test_anchor.
+	# Default: 2
+	# Range: 0 ~ 4
+	spawnTestPermission = 2
+	#Permission level for /magnetization clear_phantoms|shatter_all_ships|push_nearest_ship.
+	#These mutate world state (destroy sub-levels), so a higher level is
+	#the sensible default.
+	# Default: 2
+	# Range: 0 ~ 4
+	shipUtilPermission = 2
+	#Permission level for /magnetization lirm strike|stamp|inspect|clear|fields.
+	#Includes lightning-summoning, so keep it op-gated on shared servers.
+	# Default: 2
+	# Range: 0 ~ 4
+	lirmPermission = 2
+	#Permission level for /magnetization tp anomaly|petrified_forest.
+	#Default 0 = any player — biome travel is a quality-of-life shortcut,
+	#not a destructive admin tool. Bump to 2 if you want to lock travel.
+	# Default: 0
+	# Range: 0 ~ 4
+	tpPermission = 0

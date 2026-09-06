@@ -1,0 +1,20 @@
+#Enable auto-disassembly of falling-block sub-levels after a idle time.
+#When enabled, sub-levels that are stationary and idle for the 3 minutes will be
+#disassembled and their blocks placed back in the world as regular blocks.
+autoDisassembly = false
+#Disassemble falling-block sub-levels a few seconds after they hit the ground.
+#When enabled, blocks are placed back in the world a short time after impact
+#(anvil/dripstone damage is still applied before disassembly).
+disassembleOnImpact = false
+#Maximum damage dealt by falling anvil sub-levels on impact.
+#Damage is calculated from impact speed and capped at this value.
+#Default: 40
+# Default: 40
+# Range: > 0
+anvilDamageCap = 40
+#Maximum damage dealt by falling dripstone sub-levels on impact.
+#Damage is calculated from impact speed and capped at this value.
+#Default: 40
+# Default: 40
+# Range: > 0
+dripstoneDamageCap = 40

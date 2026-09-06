@@ -1,0 +1,12 @@
+[codex]
+	#If true, the Potioneer's Codex shows the "Clues" filter tab that lists undiscovered
+	#potions you already have a lead on. Set false to remove that filter from the codex.
+	showCluesFilter = true
+
+[shinySlimes]
+	#Cosmic magic slimes skin their core with the vanilla end-portal core shader, the
+	#screen-anchored starfield that looks deeper than the body. AUTO turns it off while an Iris
+	#shader pack is active and shows a flat starfield texture instead. ON always uses the shader,
+	#OFF always uses the texture.
+	#Allowed Values: AUTO, ON, OFF
+	cosmicPortalShader = "AUTO"

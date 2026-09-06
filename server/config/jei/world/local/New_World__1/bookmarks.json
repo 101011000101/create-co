@@ -1,0 +1,4 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"computercraft:turtle_advanced","components":{"computercraft:right_turtle_upgrade":{"id":"minecraft:diamond_pickaxe"}}},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

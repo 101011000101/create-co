@@ -1,0 +1,140 @@
+[world]
+	#If true, potion effects permanently alter the world they touch (Acid eats holes, Erode
+	#grinds stone away, etc.). If false, only DESTRUCTIVE block changes revert after a while;
+	#additive/natural changes (plants, moss, mushrooms, snow, fire) stay permanent regardless.
+	potionGriefing = true
+	#If true, nozzle potion projectiles collide with moving Create contraptions (trains, rigs)
+	#and Create Aeronautics vehicles, applying their impact on the contraption's blocks. Safe to
+	#leave on: if no such contraptions are present it does nothing.
+	projectilesHitContraptions = true
+	#Vanilla-only mode. If true, the mod keeps its fluid and mixing machinery but hides all of
+	#its custom-effect content: unstable (reaction) recipes whose result carries a modded effect
+	#stop matching in the basin, those potions leave the in-game codex, villagers and wandering
+	#traders stop selling them, and witches stop throwing them. Potions whose effects are all
+	#vanilla minecraft effects are unaffected. Off by default.
+	vanillaOnlyUnstableRecipes = false
+
+[concentration]
+	#Fraction of active potion volume lost to heating that is converted into potency gain.
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	heatedConcentrationEfficiency = 0.6
+	#Fraction of active potion volume lost to superheating that is converted into potency gain.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	superheatedConcentrationEfficiency = 0.8
+	#Maximum multiplier over an effect component's base vanilla duration or instant power.
+	# Default: 2.0
+	# Range: 1.0 ~ 64.0
+	maxConcentrationMultiplier = 2.0
+	#Fraction of current mixed potion volume evaporated per heated basin operation.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	heatedEvaporationFraction = 0.1
+	#Fraction of current mixed potion volume evaporated per superheated basin operation.
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	superheatedEvaporationFraction = 0.2
+	#Minimum mB evaporated per heated basin operation when enough fluid is present.
+	# Default: 25
+	# Range: 1 ~ 1000
+	minEvaporationMb = 25
+
+[genetics]
+	#Separate chance, checked before the rarity roll, that a shiny parent passes its shiny
+	#variant straight down to the baby.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	shinyInheritChance = 0.05
+	#Chance a bred baby rolls an uncommon shiny (Albino / Glyphic / Glowing).
+	# Default: 0.015
+	# Range: 0.0 ~ 1.0
+	shinyUncommonChance = 0.015
+	#Chance a bred baby rolls a rare shiny (Inverted).
+	# Default: 0.007
+	# Range: 0.0 ~ 1.0
+	shinyRareChance = 0.007
+	#Chance a bred baby rolls an ultra-rare shiny (Cosmic / Prismatic / Charged).
+	# Default: 0.003
+	# Range: 0.0 ~ 1.0
+	shinyUltraRareChance = 0.003
+	#Chance a naturally-spawning slime (overworld) or magma cube (Nether) is instead a magic
+	#slime imbued with a random effect. Very rare by default.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	magicSlimeSpawnChance = 0.01
+	#Safety cap: the maximum number of magic slimes allowed to exist in any one dimension. When
+	#exceeded, the smallest excess are quietly removed. Removal is a discard, not a kill, so the
+	#removed slimes never split. Set to 0 to disable the cap. Vanilla slimes are never affected.
+	# Default: 500
+	# Range: 0 ~ 100000
+	magicSlimePerLevelCap = 500
+
+[courier]
+	#If true, a valid courier route force-loads the chunks of its own posts so it keeps flying
+	#and delivering while you are away. Off by default, couriers only run in chunks that are already
+	#loaded and pause safely otherwise. Only the route's post chunks are loaded, nothing wider.
+	keepRoutesLoaded = false
+	#Safety cap on how many chunks keepRoutesLoaded may hold at once across all routes. Once
+	#the cap is reached no further route chunks are force-loaded. Ignored when keepRoutesLoaded is off.
+	# Default: 64
+	# Range: 0 ~ 4096
+	maxLoadedChunks = 64
+	#If true, a courier may fly to and deliver into a post whose chunk is unloaded without
+	#loading it. The cargo waits in a per-post buffer and drops into that post's receive slot the
+	#moment its chunk next loads, so items still move to remote storage while you are away and no
+	#chunk stays loaded. Couriers only pick up from loaded posts, an unloaded post can receive but
+	#not send. Off by default.
+	virtualDelivery = false
+	#Maximum distance in blocks between two consecutive courier route points. Longer hops
+	#cost nothing extra per tick, the flight simply takes longer.
+	# Default: 100.0
+	# Range: 10.0 ~ 512.0
+	courierMaxHopDistance = 100.0
+
+[distillation]
+	#Fraction of a heated liquid gel's volume that boils off as vapor. The rest stays behind in
+	#the tank as spent gel tallow, which goes inert (its effects left in the vapor) and has to be
+	#drained before the tank takes another batch. At the default 0.8 a 1500 mB gel leaves 300 mB of
+	#tallow.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	gelVaporFraction = 0.8
+	#When the centrifuge cleans impure potion, the waste sludge it spins out as a byproduct,
+	#as a fraction of the cleaned volume. The clean potion still comes out in full, so this sludge
+	#is generated on top of it. At the default 0.25 a 1500 mB batch yields an extra 375 mB of sludge.
+	#Set to 0 to disable sludge entirely (impure potion still cleans, just leaves no waste).
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	sludgeFraction = 0.25
+	#Diminishing rate when a Potent (Luminous) precursor boils up into Potent vapor in the tank
+	#above: mB of precursor spent per 1 mB of vapor produced. At 16, a 1000 mB batch yields ~62 mB
+	#of vapor; the last under-one-ratio remainder is burned off rather than rounding up to 1 mB.
+	# Default: 16
+	# Range: 1 ~ 1000
+	potentVaporRatio = 16
+	#As potentVaporRatio, for an Extended (Temporal) precursor. Defaults to 8 (1000 mB -> ~125 mB).
+	# Default: 8
+	# Range: 1 ~ 1000
+	extendedVaporRatio = 8
+
+[gas]
+	#Cap on server-tracked gas smoke motes, the invisible twins that let pipe-emitted smoke
+	#particles carry their potion effects wherever wind and fans blow them. Past the cap new puffs
+	#are visual-only (the client particles always play), and the gas cloud bodies still dose, so
+	#nothing breaks, the smoke just stops dosing per-puff. Set 0 to disable motes entirely.
+	# Default: 512
+	# Range: 0 ~ 4096
+	maxGasMotes = 512
+
+[triggers]
+	#Ticks after arming before an unfired trigger block fizzles (its payload lost). 0 disables
+	#expiry, so a dormant trigger waits forever. 24000 = one Minecraft day. A nested block's timer
+	#only starts once its parent trigger fires and it arms.
+	# Default: 0
+	# Range: 0 ~ 1728000
+	triggerExpirationTicks = 0
+	#If true, placed potion source blocks sort vertically against other liquid sources by
+	#their mixture density (light brews float up through water, heavy ones sink). Event-driven:
+	#a settled lake schedules nothing. Disable to freeze placed potions in place.
+	placedPotionBuoyancy = true

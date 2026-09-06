@@ -1,0 +1,38 @@
+#Whether to launch falling blocks after an explosion
+launchFallingBlocks = true
+#Chance to launch a given block during an explosion
+# Default: 0.5
+# Range: 0.0 ~ 1.0
+launchBlockChance = 0.5
+#Whether to use default explosion knockback for launched falling blocks
+blockDefaultKnockback = false
+#Amount the blocks are launched when using custom knockback
+# Default: 1.0
+# Range: 0.0 ~ 1.7976931348623157E308
+blockKnockbackForce = 1.0
+#Amount the direction blocks are launched is randomised
+# Default: 0.5
+# Range: 0.0 ~ 1.7976931348623157E308
+randomDirectionMagnitude = 0.5
+#Amount the direction is biased upwards when launching blocks
+# Default: 3.0
+# Range: 0.0 ~ 1.7976931348623157E308
+directionUpwardsBias = 0.75
+#Whether to use custom logic to attempt to re place blocks in update on land tag
+rePlaceTaggedBlocks = true
+#Whether exploded blocks should have smoke trails
+enableSmokeTrails = true
+#Chance for a smoking block to emit a trail particle
+# Default: 0.2
+# Range: 0.0 ~ 1.0
+smokeParticleChance = 0.2
+#How fast smoke particles spread out from their original position
+# Default: 0.025
+# Range: 0.0 ~ 1.7976931348623157E308
+smokeParticleSpread = 0.025
+#Whether primed tnt should emit sparks
+enableFuseSparks = true
+#How fast fuse particles spread out from their original position
+# Default: 0.05
+# Range: 0.0 ~ 1.7976931348623157E308
+fuseSparkSpread = 0.05

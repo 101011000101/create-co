@@ -1,0 +1,71 @@
+[world]
+	#If true, potion effects permanently alter the world they touch (Acid eats holes, Erode
+	#grinds stone away, etc.). If false, only DESTRUCTIVE block changes revert after a while;
+	#additive/natural changes (plants, moss, mushrooms, snow, fire) stay permanent regardless.
+	potionGriefing = true
+	#If true, nozzle potion projectiles collide with moving Create contraptions (trains, rigs)
+	#and Create Aeronautics vehicles, applying their impact on the contraption's blocks. Safe to
+	#leave on: if no such contraptions are present it does nothing.
+	projectilesHitContraptions = true
+	#Vanilla-only mode. If true, the mod keeps its fluid and mixing machinery but hides all of
+	#its custom-effect content: unstable (reaction) recipes whose result carries a modded effect
+	#stop matching in the basin, those potions leave the in-game codex, villagers and wandering
+	#traders stop selling them, and witches stop throwing them. Potions whose effects are all
+	#vanilla minecraft effects are unaffected. Off by default.
+	vanillaOnlyUnstableRecipes = false
+
+[concentration]
+	#Fraction of active potion volume lost to heating that is converted into potency gain.
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	heatedConcentrationEfficiency = 0.6
+	#Fraction of active potion volume lost to superheating that is converted into potency gain.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	superheatedConcentrationEfficiency = 0.8
+	#Maximum multiplier over an effect component's base vanilla duration or instant power.
+	# Default: 2.0
+	# Range: 1.0 ~ 64.0
+	maxConcentrationMultiplier = 2.0
+	#Fraction of current mixed potion volume evaporated per heated basin operation.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	heatedEvaporationFraction = 0.1
+	#Fraction of current mixed potion volume evaporated per superheated basin operation.
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	superheatedEvaporationFraction = 0.2
+	#Minimum mB evaporated per heated basin operation when enough fluid is present.
+	# Default: 25
+	# Range: 1 ~ 1000
+	minEvaporationMb = 25
+
+[genetics]
+	#Chance a bred magic-slime baby is a hybrid blend of BOTH parents' mixes. On the roll it
+	#blends them (50% even 1:1, 25% 2:1, 25% 1:2) and may trigger a magma reaction; otherwise the
+	#baby copies one parent outright.
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	hybridChance = 0.15
+	#Separate chance, checked before the rarity roll, that a shiny parent passes its shiny
+	#variant straight down to the baby.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	shinyInheritChance = 0.05
+	#Chance a bred baby rolls an uncommon shiny (Albino / Glyphic / Glowing).
+	# Default: 0.015
+	# Range: 0.0 ~ 1.0
+	shinyUncommonChance = 0.015
+	#Chance a bred baby rolls a rare shiny (Inverted).
+	# Default: 0.007
+	# Range: 0.0 ~ 1.0
+	shinyRareChance = 0.007
+	#Chance a bred baby rolls an ultra-rare shiny (Cosmic / Prismatic / Charged).
+	# Default: 0.003
+	# Range: 0.0 ~ 1.0
+	shinyUltraRareChance = 0.003
+	#Chance a naturally-spawning slime (overworld) or magma cube (Nether) is instead a magic
+	#slime imbued with a random effect. Very rare by default.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	magicSlimeSpawnChance = 0.01

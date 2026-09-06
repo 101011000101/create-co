@@ -1,0 +1,15 @@
+#Maximum FOV slider value.
+#Range: 110..360
+# Default: 360
+# Range: 110 ~ 360
+maxFov = 360
+#Extra frustum culling margin in blocks.
+#Range: 0..256
+# Default: 40
+# Range: 0 ~ 256
+cullingMarginBlocks = 40
+#Extra Distant Horizons LOD frustum culling margin in blocks.
+#Range: 0..256
+# Default: 80
+# Range: 0 ~ 256
+distantHorizonsCullingMarginBlocks = 80

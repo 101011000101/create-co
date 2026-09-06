@@ -1,0 +1,4 @@
+[codex]
+	#If true, the Potioneer's Codex shows the "Clues" filter tab that lists undiscovered
+	#potions you already have a lead on. Set false to remove that filter from the codex.
+	showCluesFilter = true
